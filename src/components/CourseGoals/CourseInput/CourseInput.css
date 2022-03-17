@@ -1,18 +1,9 @@
 .form-control {
   margin: 0.5rem 0;
 }
-.false-form-control {
-  margin: 0.5rem 0;
-}
 
 .form-control label {
   font-weight: bold;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.false-form-control label {
-  font-weight: bold;
-  color: red;
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -26,18 +17,18 @@
   padding: 0 0.25rem;
 }
 
-.false-form-control input {
-  display: block;
-  width: 100%;
-  border: 1px solid red;
-  font: inherit;
-  line-height: 1.5rem;
-  padding: 0 0.25rem;
-}
-
-
 .form-control input:focus {
   outline: none;
   background: #fad0ec;
   border-color: #8b005d;
 }
+
+.form-control.invalid input {
+  border-color: red;
+  background-color: rgb(238, 96, 96);
+}
+
+.form-control.invalid label {
+  color: red;
+}
+
