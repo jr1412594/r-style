@@ -24,11 +24,13 @@ const CourseInput = props => {
     }
   };
 
+  const dynamicID = isValid ? 'form-control' : 'form-control invalid';
+
   return (
     <form onSubmit={formSubmitHandler}>
-      <div className={!isValid ? "false-form-control" : "form-control"}>
+      <div className= {dynamicID}>
         <label>Course Goal</label>
-        <input style={{borderColor: !isValid ? 'red' : '#ccc', backgroundColor: !isValid ? 'salmon': 'transparent'}}type="text" onChange={goalInputChangeHandler} />
+        <input type="text" onChange={goalInputChangeHandler} />
       </div>
       <Button type="submit">Add Goal</Button>
     </form>
